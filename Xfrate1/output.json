@@ -1,0 +1,16 @@
+{
+  "number_of_vehicle": "Integer",
+  "vehicle_type": "LCV/HCV/Trailer/City Logistic",
+  "vehicle_size": "selected vehicle type's size description",
+  "body_type": "Open body/ Closed body/ Refrigerated",
+  "packaging_type": "Carton Box/Open or Loose/Drum/Gunny Bag",
+  "pickup_address": "Complete pickup address",
+  "pickup_date_and_time": "dd/mm/yyyy hour:minute",
+  "destination_address": "Complete destination address",
+  "expected_delivery_date_and_time": "dd/mm/yyyy hour:minute",
+  "product_category": "category of products",
+  "product_description": "string",
+  "total_weight": "weight in tonnes",
+  "shippers_note": "string",
+  "pod_type": "soft copy/hardcopy/both"
+}

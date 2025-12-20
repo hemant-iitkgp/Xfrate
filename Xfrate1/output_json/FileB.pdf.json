@@ -1,0 +1,36 @@
+{
+    "orders": [
+        {
+            "number_of_vehicle": 4,
+            "vehicle_type": "City Logistic",
+            "vehicle_size": null,
+            "body_type": "Open",
+            "packaging_type": "Loose",
+            "pickup_address": "Kharagpur (IIT Puri Gate, West Bengal)",
+            "pickup_date_and_time": "24-12-2025 00:00",
+            "destination_address": "Mumbai Main Gate hub",
+            "expected_delivery_date_and_time": null,
+            "product_category": "Industrial Machinery",
+            "product_description": "spare parts",
+            "total_weight": 8.0,
+            "shippers_note": null,
+            "pod_type": "Both"
+        },
+        {
+            "number_of_vehicle": 1,
+            "vehicle_type": "HCV",
+            "vehicle_size": null,
+            "body_type": "Closed",
+            "packaging_type": "Carton Box",
+            "pickup_address": "Pune Plant (Chakan MIDC)",
+            "pickup_date_and_time": "26-12-2025 00:00",
+            "destination_address": "Chennai Port Terminal",
+            "expected_delivery_date_and_time": null,
+            "product_category": "Industrial Machinery",
+            "product_description": "cooling equipment",
+            "total_weight": 15.0,
+            "shippers_note": "Vehicle must arrive by 06:00 AM for morning loading.",
+            "pod_type": "Both"
+        }
+    ]
+}
