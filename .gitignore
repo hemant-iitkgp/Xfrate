@@ -1,1 +1,22 @@
 **/.env
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Logs
+# *.log
+
+# Input / user files
+# Xfrate2/input/*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
