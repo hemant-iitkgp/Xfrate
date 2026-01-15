@@ -967,3 +967,188 @@ AttributeError: 'str' object has no attribute 'paragraphs'
 14:57:34 [INFO] - >>> NODE 4: finalize_and_route STARTED <<<
 14:57:34 [INFO] - Committed 1 orders to Success DB.
 14:57:34 [INFO] - Pipeline Finished.
+12:48:58 [INFO] - Initializing AI Agent...
+13:22:02 [INFO] - Initializing AI Agent...
+13:23:48 [INFO] - Received Request: test_swagger_01
+13:23:48 [INFO] - Downloading document from: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+13:23:50 [ERROR] - Download Failed: name 'tempfile' is not defined
+13:23:50 [ERROR] - Processing failed: name 'tempfile' is not defined
+Traceback (most recent call last):
+  File "C:\Users\heman\OneDrive\Documents\Xfrate\server.py", line 46, in extract_endpoint
+    result = agent_app.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\heman\OneDrive\Documents\Xfrate\Xfrate2\nodes\file_reader.py", line 120, in parse_document
+    raise e
+  File "C:\Users\heman\OneDrive\Documents\Xfrate\Xfrate2\nodes\file_reader.py", line 111, in parse_document
+    with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp_file:
+         ^^^^^^^^
+NameError: name 'tempfile' is not defined. Did you mean: 'compile'? Or did you forget to import 'tempfile'
+During task with name 'parse_node' and id '109b8682-d3bf-75aa-0279-aa091d48e779'
+13:25:39 [INFO] - Initializing AI Agent...
+13:26:02 [INFO] - Initializing AI Agent...
+13:27:15 [INFO] - Initializing AI Agent...
+13:29:56 [INFO] - Initializing AI Agent...
+13:35:51 [INFO] - Received Request: test_1
+13:35:51 [INFO] - Downloading document from: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+13:35:53 [ERROR] - Download Failed: name 'tempfile' is not defined
+13:35:53 [ERROR] - Processing failed: name 'tempfile' is not defined
+Traceback (most recent call last):
+  File "C:\Users\heman\OneDrive\Documents\Xfrate\server.py", line 46, in extract_endpoint
+    result = agent_app.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "C:\Python312\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\heman\OneDrive\Documents\Xfrate\Xfrate2\nodes\file_reader.py", line 120, in parse_document
+    raise e
+  File "C:\Users\heman\OneDrive\Documents\Xfrate\Xfrate2\nodes\file_reader.py", line 111, in parse_document
+    with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp_file:
+         ^^^^^^^^
+NameError: name 'tempfile' is not defined. Did you mean: 'compile'? Or did you forget to import 'tempfile'
+During task with name 'parse_node' and id '468bf20a-a355-cf66-0555-ad7350190f73'
+13:38:56 [INFO] - Initializing AI Agent...
+13:39:47 [INFO] - Received Request: test_1
+13:39:47 [INFO] - Downloading document from: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+13:39:48 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmpszj3ya46.pdf
+13:39:48 [INFO] - Extraction complete. 14 chars.
+13:39:48 [INFO] - Temp file cleaned up.
+13:39:48 [INFO] - >>> NODE 2: extract_order STARTED <<<
+13:39:48 [INFO] - Detected Text (.pdf). Preparing Text Payload...
+13:39:48 [INFO] - LLM Call Attempt 1/3...
+13:39:51 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 0 orders extracted
+13:39:51 [INFO] - >>> NODE 3: validate_data STARTED <<<
+13:39:51 [WARNING] - Critical: No orders found in extraction.
+13:39:51 [INFO] - >>> NODE 4: Finalizing Data <<<
+13:39:51 [INFO] - Result: 0 Success, 0 Review
+14:56:08 [INFO] - Initializing AI Agent...
+14:57:03 [INFO] - Received Request: test1
+14:57:03 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile2/main/FileD%20(3).pdf
+14:57:05 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmpvbxkd5sd.pdf
+14:57:05 [INFO] - Extraction complete. 1500 chars.
+14:57:05 [INFO] - Temp file cleaned up.
+14:57:05 [INFO] - >>> NODE 2: extract_order STARTED <<<
+14:57:05 [INFO] - Detected Text (.pdf). Preparing Text Payload...
+14:57:05 [INFO] - LLM Call Attempt 1/3...
+14:57:20 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 4 orders extracted
+14:57:20 [INFO] - >>> NODE 3: validate_data STARTED <<<
+14:57:20 [INFO] - Validation passed. Data is clean.
+14:57:20 [INFO] - >>> NODE 4: Finalizing Data <<<
+14:57:20 [INFO] - Result: 4 Success, 0 Review
+15:00:09 [INFO] - Received Request: test2
+15:00:09 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile1/main/FileE.png
+15:00:14 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmp1466drz4.png
+15:00:14 [INFO] - Extraction complete. 534864 chars.
+15:00:14 [INFO] - Temp file cleaned up.
+15:00:14 [INFO] - >>> NODE 2: extract_order STARTED <<<
+15:00:14 [INFO] - Detected Image (.png). Preparing Vision Payload...
+15:00:14 [INFO] - LLM Call Attempt 1/3...
+15:00:28 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 1 orders extracted
+15:00:28 [INFO] - >>> NODE 3: validate_data STARTED <<<
+15:00:28 [INFO] - Validation passed. Data is clean.
+15:00:28 [INFO] - >>> NODE 4: Finalizing Data <<<
+15:00:28 [INFO] - Result: 1 Success, 0 Review
+15:01:17 [INFO] - Received Request: test2
+15:01:17 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile1/main/FileE.png
+15:01:19 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmpbzggv117.png
+15:01:19 [INFO] - Extraction complete. 534864 chars.
+15:01:19 [INFO] - Temp file cleaned up.
+15:01:19 [INFO] - >>> NODE 2: extract_order STARTED <<<
+15:01:19 [INFO] - Detected Image (.png). Preparing Vision Payload...
+15:01:19 [INFO] - LLM Call Attempt 1/3...
+15:01:37 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 1 orders extracted
+15:01:37 [INFO] - >>> NODE 3: validate_data STARTED <<<
+15:01:37 [INFO] - Validation passed. Data is clean.
+15:01:37 [INFO] - >>> NODE 4: Finalizing Data <<<
+15:01:37 [INFO] - Result: 1 Success, 0 Review
+15:03:03 [INFO] - Received Request: test.png
+15:03:03 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile1/main/FileE.png
+15:03:06 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmpcxzvvf_4.png
+15:03:06 [INFO] - Extraction complete. 534864 chars.
+15:03:06 [INFO] - Temp file cleaned up.
+15:03:06 [INFO] - >>> NODE 2: extract_order STARTED <<<
+15:03:06 [INFO] - Detected Image (.png). Preparing Vision Payload...
+15:03:06 [INFO] - LLM Call Attempt 1/3...
+15:03:23 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 1 orders extracted
+15:03:23 [INFO] - >>> NODE 3: validate_data STARTED <<<
+15:03:23 [INFO] - Validation passed. Data is clean.
+15:03:23 [INFO] - >>> NODE 4: Finalizing Data <<<
+15:03:23 [INFO] - Result: 1 Success, 0 Review
+15:08:02 [INFO] - Received Request: test.docx
+15:08:02 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile3/main/FileA.docx
+15:08:04 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmpke30ufgc.docx
+15:08:04 [INFO] - Extraction complete. 552 chars.
+15:08:04 [INFO] - Temp file cleaned up.
+15:08:04 [INFO] - >>> NODE 2: extract_order STARTED <<<
+15:08:04 [INFO] - Detected Text (.docx). Preparing Text Payload...
+15:08:04 [INFO] - LLM Call Attempt 1/3...
+15:08:06 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 0 orders extracted
+15:08:06 [INFO] - >>> NODE 3: validate_data STARTED <<<
+15:08:06 [WARNING] - Critical: No orders found in extraction.
+15:08:06 [INFO] - >>> NODE 4: Finalizing Data <<<
+15:08:06 [INFO] - Result: 0 Success, 0 Review
+15:08:30 [INFO] - Received Request: test.docx
+15:08:30 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile3/main/FileA.docx
+15:08:31 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmpf1pnfncg.docx
+15:08:31 [INFO] - Extraction complete. 552 chars.
+15:08:31 [INFO] - Temp file cleaned up.
+15:08:31 [INFO] - >>> NODE 2: extract_order STARTED <<<
+15:08:31 [INFO] - Detected Text (.docx). Preparing Text Payload...
+15:08:31 [INFO] - LLM Call Attempt 1/3...
+15:08:33 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 0 orders extracted
+15:08:33 [INFO] - >>> NODE 3: validate_data STARTED <<<
+15:08:33 [WARNING] - Critical: No orders found in extraction.
+15:08:33 [INFO] - >>> NODE 4: Finalizing Data <<<
+15:08:33 [INFO] - Result: 0 Success, 0 Review
+15:10:26 [INFO] - Received Request: test.docx
+15:10:26 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile3/main/FileA.pdf
+15:10:28 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmpsab9ln0a.pdf
+15:10:28 [INFO] - Extraction complete. 1069 chars.
+15:10:28 [INFO] - Temp file cleaned up.
+15:10:28 [INFO] - >>> NODE 2: extract_order STARTED <<<
+15:10:28 [INFO] - Detected Text (.pdf). Preparing Text Payload...
+15:10:28 [INFO] - LLM Call Attempt 1/3...
+15:10:39 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 3 orders extracted
+15:10:39 [INFO] - >>> NODE 3: validate_data STARTED <<<
+15:10:39 [INFO] - Validation passed. Data is clean.
+15:10:39 [INFO] - >>> NODE 4: Finalizing Data <<<
+15:10:39 [INFO] - Result: 3 Success, 0 Review
+15:28:02 [INFO] - Received Request: testFileB
+15:28:02 [INFO] - Downloading document from: https://raw.githubusercontent.com/hemant-iitkgp/testFile4/main/FileB.pdf
+15:28:04 [INFO] - File saved to temp: C:\Users\heman\AppData\Local\Temp\tmp5meen0wy.pdf
+15:28:05 [INFO] - Extraction complete. 1553 chars.
+15:28:05 [INFO] - Temp file cleaned up.
+15:28:05 [INFO] - >>> NODE 2: extract_order STARTED <<<
+15:28:05 [INFO] - Detected Text (.pdf). Preparing Text Payload...
+15:28:05 [INFO] - LLM Call Attempt 1/3...
+15:28:16 [INFO] - [SUCCESS]Extraction Successful on attempt 1; 2 orders extracted
+15:28:16 [INFO] - >>> NODE 3: validate_data STARTED <<<
+15:28:16 [INFO] - Validation passed. Data is clean.
+15:28:16 [INFO] - >>> NODE 4: Finalizing Data <<<
+15:28:16 [INFO] - Result: 2 Success, 0 Review

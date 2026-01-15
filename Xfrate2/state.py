@@ -107,32 +107,55 @@ class FTLOrderResponse(BaseModel):
 # (Stays the same as previous response)
 from typing import TypedDict, List, Dict, Any, Optional
 
+# class AgentState(TypedDict):
+#     """
+#     State representing the full lifecycle of the extraction process.
+#     """
+#     # --- 1. Inputs ---
+#     file_path: str
+    
+#     # --- 2. Processing Data ---
+#     extracted_text: str
+#     file_type: str
+
+#     # --- 3. The Master Record (Mutable) ---
+#     # Stores {"orders": [ { "vehicle_type": { "value": "...", "confidence": ... } } ] }
+#     raw_extraction: Dict[str, Any] 
+
+#     # --- 4. The Loop Drivers ---
+    
+#     # A. The Problem List
+#     # Populated by Node C (Validator). Cleared if validation passes.
+#     # Format: [{'order_index': int, 'field': str, 'issue': str, 'current_value': Any}]
+#     validation_errors: List[Dict[str, Any]]
+
+#     # B. The Human Input Inbox
+#     # Populated by the User (during Interrupt). Processed & Cleared by Node D (Human Node).
+#     # Format: [{'order_index': int, 'field': str, 'corrected_value': Any}]
+#     human_corrections: List[Dict[str, Any]]
+
+#     # --- 5. Final Output ---
+#     final_orders: List[Dict[str, Any]]
+
+
 class AgentState(TypedDict):
     """
     State representing the full lifecycle of the extraction process.
     """
     # --- 1. Inputs ---
-    file_path: str
+    document_url: str      # <--- NEW: URL from API
+    file_path: str         # Internal temp path (or source name)
     
     # --- 2. Processing Data ---
     extracted_text: str
     file_type: str
 
-    # --- 3. The Master Record (Mutable) ---
-    # Stores {"orders": [ { "vehicle_type": { "value": "...", "confidence": ... } } ] }
+    # --- 3. The Master Record ---
     raw_extraction: Dict[str, Any] 
 
-    # --- 4. The Loop Drivers ---
-    
-    # A. The Problem List
-    # Populated by Node C (Validator). Cleared if validation passes.
-    # Format: [{'order_index': int, 'field': str, 'issue': str, 'current_value': Any}]
+    # --- 4. Validation Data ---
     validation_errors: List[Dict[str, Any]]
 
-    # B. The Human Input Inbox
-    # Populated by the User (during Interrupt). Processed & Cleared by Node D (Human Node).
-    # Format: [{'order_index': int, 'field': str, 'corrected_value': Any}]
-    human_corrections: List[Dict[str, Any]]
-
-    # --- 5. Final Output ---
-    final_orders: List[Dict[str, Any]]
+    # --- 5. Outputs (API Response) ---
+    final_orders: List[Dict[str, Any]]      # <--- Clean Orders
+    needs_review: List[Dict[str, Any]]      # <--- Erroneous Orders
